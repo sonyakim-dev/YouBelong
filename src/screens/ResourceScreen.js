@@ -35,10 +35,19 @@ class FlatListItem extends Component {
             </Text>
             <View style={styles.categoryContainer}>
               <View style={styles.category}>
-                <Text style={styles.categoryText}>internship</Text>
+                <Text style={styles.categoryText}>
+                  {this.props.item.category1}
+                </Text>
               </View>
               <View style={styles.category}>
-                <Text style={styles.categoryText}>workshop</Text>
+                <Text style={styles.categoryText}>
+                  {this.props.item.category2}
+                </Text>
+              </View>
+              <View style={styles.category}>
+                <Text style={styles.categoryText}>
+                  {this.props.item.category3}
+                </Text>
               </View>
             </View>
           </View>
@@ -57,7 +66,7 @@ export default class ResourceScreen extends Component {
           style={styles.list}
           data={resourceData}
           renderItem={({ item, index }) => {
-            return <FlatListItem item={item} index={index}/>;
+            return <FlatListItem item={item} index={index} />;
           }}
         />
 
@@ -66,9 +75,7 @@ export default class ResourceScreen extends Component {
           style={styles.list}
           data={resourceData2}
           renderItem={({ item, index }) => {
-            return (
-              <FlatListItem item={item} index={index}/>
-            );
+            return <FlatListItem item={item} index={index} />;
           }}
         />
       </ScrollView>
@@ -100,7 +107,7 @@ const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
     resizeMode: "cover",
-    borderRadius: 15,
+    // borderRadius: 15,
     // aspectRatio: 1,
   },
   resourceInfo: {

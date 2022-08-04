@@ -24,7 +24,7 @@ export default function IntroSecond({ navigation }) {
         <View style={styles.row}>
           <Image
             style={styles.tinyLogo}
-            source={require("../../assets/snapchat/vector.png")}
+            source={require("../../assets/snapchat/vector2.png")}
           />
           <Text style={styles.header}>Creator Hub</Text>
         </View>
