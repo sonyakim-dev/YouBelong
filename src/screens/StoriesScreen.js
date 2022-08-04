@@ -116,7 +116,7 @@ export default function StoriesScreen({ navigation, route }) {
       >
         <Ionicons name="arrow-redo" color={'white'} size={23} style={{marginTop:4}}/>
       </TouchableOpacity> */}
-      <StatusBar />
+      <StatusBar style='dark'/>
     </View>
   );
 }

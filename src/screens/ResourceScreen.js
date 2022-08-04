@@ -15,6 +15,7 @@ import React, { useState, useEffect, Component } from "react";
 import resourceData from "../components/ResourceData";
 import resourceData2 from "../components/ResourceData2";
 
+// console.reportErrorsAsExceptions = false;
 class FlatListItem extends Component {
   render() {
     return (
@@ -57,7 +58,7 @@ export default class ResourceScreen extends Component {
           style={styles.list}
           data={resourceData}
           renderItem={({ item, index }) => {
-            return <FlatListItem item={item} index={index}></FlatListItem>;
+            return <FlatListItem item={item} index={index}/>;
           }}
         />
 
@@ -67,9 +68,7 @@ export default class ResourceScreen extends Component {
           data={resourceData2}
           renderItem={({ item, index }) => {
             return (
-              <FlatListItem item={item} index={index}>
-                <Text style={styles.header}>Resources</Text>
-              </FlatListItem>
+              <FlatListItem item={item} index={index}/>
             );
           }}
         />

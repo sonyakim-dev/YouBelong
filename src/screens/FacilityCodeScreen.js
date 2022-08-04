@@ -22,7 +22,7 @@ export default function FacilityCodeScreen({navigation}) {
         />
       </View>
       <TouchableOpacity onPress={()=>navigation.navigate('Camera')} style={styles.buttonContainer}>
-        <Text style={styles.buttonText}>Submit</Text>
+        <Text style={styles.buttonText}>Enter</Text>
       </TouchableOpacity>
     </View>
   )
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     backgroundColor: '#FFC700',
     paddingVertical: 10,
-    paddingHorizontal: 35,
+    paddingHorizontal: 50,
     borderRadius: 30,
   },
   buttonText: {
