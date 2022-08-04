@@ -25,6 +25,7 @@ import uuid from "uuid-random";
 import { useAuthentication } from "../utils/hooks/useAuthentication";
 import { StatusBar } from "expo-status-bar";
 import { useNavigation } from "@react-navigation/native";
+import { MaterialIcons } from "@expo/vector-icons";
 
 export default function SavePostScreen({ route }) {
   const storageRef = ref(getStorage(), `posts/${uuid()}.jpg`);
@@ -127,16 +128,16 @@ export default function SavePostScreen({ route }) {
 
       <TouchableOpacity
         onPress={() => {
-          /*saveMediaToStorage();*/ navigation.popToTop();
+          /*saveMediaToStorage();*/ navigation.navigate("Camera");
           navigation.navigate("Stories");
         }}
         style={styles.postButton}
       >
-        <Ionicons
-          name="arrow-redo"
+        <MaterialIcons
+          name="file-upload"
           color={"white"}
           size={23}
-          style={{ marginTop: 4 }}
+          style={{ marginTop: 5 }}
         />
       </TouchableOpacity>
 
@@ -203,6 +204,13 @@ const styles = StyleSheet.create({
     bottom: 20,
     right: 20,
     alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
   },
   categorySelection: {
     paddingHorizontal: 10,

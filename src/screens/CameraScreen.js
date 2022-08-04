@@ -111,7 +111,7 @@ export default function CameraScreen({ navigation, focused }) {
           </View>
         </View>
       </Modal>
-      <StatusBar style='light'/>
+      <StatusBar style='auto'/>
     </>
   );
 }
