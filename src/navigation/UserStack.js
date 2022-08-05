@@ -4,6 +4,7 @@ import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import { AntDesign } from '@expo/vector-icons';
 import { StatusBar } from "expo-status-bar";
 
 import { getAuth, signOut } from "firebase/auth";
@@ -12,6 +13,7 @@ import CameraStack from "../navigation/CameraStack";
 import StoriesStack from "../navigation/StoriesStack";
 import ResourceStack from "../navigation/ResourceStack";
 import { createStackNavigator } from "@react-navigation/stack";
+import Test from "../screens/Test";
 
 //Screens
 import IntroStack from "./IntroStack";
@@ -51,16 +53,16 @@ export default function UserStack({ navigation }) {
               iconName = "ios-location-outline";
               iconColor = focused ? "green" : "grey";
             } else if (route.name === "ResourceStack") {
-              iconName = "ios-chatbox-outline";
-              iconColor = focused ? "#2b83b3" : "grey";
+              iconColor = focused ? "#EC6060" : "grey";
+              return <AntDesign name={'book'} size={size-2} color={iconColor}/>
             } else if (route.name === "CameraStack") {
               iconName = focused
                 ? "ios-scan-circle-outline"
                 : "ios-camera-outline";
-              iconColor = focused ? "yellow" : "grey";
+              iconColor = focused ? "#FFDD5E" : "grey";
             } else if (route.name === "StoriesStack") {
-              iconName = "ios-people-outline";
-              iconColor = focused ? "purple" : "grey";
+              iconName = focused? "ios-people" : "ios-people-outline";
+              iconColor = focused ? "#5F86FF" : "grey";
             }
             return <Ionicons name={iconName} size={size} color={iconColor} />;
           },

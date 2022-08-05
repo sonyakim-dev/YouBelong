@@ -7,17 +7,27 @@ import {
   FlatList,
   TouchableOpacity,
   Button,
+  RefreshControl,
 } from "react-native";
 import { collection, getDocs, onSnapshot } from "firebase/firestore";
-import Feed from "../components/Feed";
 import db from "../../firebase";
 import { StatusBar } from "expo-status-bar";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { Video } from "expo-av";
 
+const wait = (timeout) => {
+  return new Promise((resolve) => setTimeout(resolve, timeout));
+};
+
 export default function StoriesScreen({ navigation, route }) {
   const videoRef = useRef(null);
   const [posts, setPosts] = useState([]);
+  const [refresh, setRefresh] = useState(false);
+
+  const onRefresh = React.useCallback(() => {
+    setRefresh(true);
+    wait(2000).then(() => setRefresh(false));
+  }, []);
 
   async function getPosts() {
     const querySnapshot = await getDocs(collection(db, "Stories"));
@@ -34,16 +44,29 @@ export default function StoriesScreen({ navigation, route }) {
     return function cleanupBeforeUnmounting() {
       setPosts([]);
     };
-  }, []);
+  }, [refresh]);
 
   return (
     <View style={styles.container}>
+      <View style={styles.headerContainer}>
+        {/* <Ionicons
+          name={"chevron-back-outline"}
+          color={"black"}
+          size={25}
+          style={styles.exitButton}
+        /> */}
+        <View style={{flex:1}}></View>
+        <Text style={styles.headerTitle}>The Spot</Text>
+        <View style={{flex:1}}></View>
+      </View>
       {posts.length ? (
         <FlatList
           data={posts}
+          refreshControl={
+            <RefreshControl refreshing={refresh} onRefresh={onRefresh} />
+          }
           renderItem={(post, index) => {
             return (
-              // <Feed url={post.item.downloadURL} type={post.item.contentType} key={index} style={styles.feed}/>
               <TouchableOpacity
                 style={styles.feedContainer}
                 onPress={() =>
@@ -86,7 +109,14 @@ export default function StoriesScreen({ navigation, route }) {
       ) : (
         <></>
       )}
-      <StatusBar />
+
+      {/* <TouchableOpacity
+          onPress={() => {window.location.reload(false)}}
+          style={styles.refreshButton}
+      >
+        <Ionicons name="arrow-redo" color={'white'} size={23} style={{marginTop:4}}/>
+      </TouchableOpacity> */}
+      <StatusBar style='dark'/>
     </View>
   );
 }
@@ -96,14 +126,23 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "white",
   },
-  // header: {
-  //   flexDirection: 'row',
-  //   alignSelf: 'center',
-  //   marginTop: 50,
-  //   paddingTop: 10,
-  //   textAlign: 'center',
-  //   fontFamily: 'Avenir Next',
-  // },
+  headerContainer: {
+    flexDirection: 'row',
+    marginTop: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  headerTitle: {
+    textAlign: 'center',
+    fontSize: 30,
+    fontWeight: 'bold',
+    paddingBottom: 5,
+  },
+  exitButton: {
+    flex: 1,
+    alignSelf: 'left',
+    
+  },
   list: {
     flex: 1,
     paddingHorizontal: 20,
@@ -141,5 +180,15 @@ const styles = StyleSheet.create({
   playButton: {
     alignSelf: "center",
     marginLeft: 5,
+  },
+  refreshButton: {
+    backgroundColor: "#5F86FF",
+    borderRadius: 20,
+    width: 35,
+    height: 35,
+    position: "absolute",
+    bottom: 20,
+    right: 20,
+    alignItems: "center",
   },
 });
