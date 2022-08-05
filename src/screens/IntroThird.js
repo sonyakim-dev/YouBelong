@@ -20,7 +20,7 @@ export default function IntroThird({ navigation }) {
         <View style={styles.row}>
           <Image
             style={styles.tinyLogo}
-            source={require("../../assets/snapchat/vector.png")}
+            source={require("../../assets/snapchat/vector3.png")}
           />
           <Text style={styles.header}>Resources</Text>
         </View>
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get("window").width,
   },
   row: {
-    marginTop: 330,
+    marginTop: 300,
     paddingVertical: 15,
     paddingHorizontal: 10,
     flexDirection: "row",
@@ -61,18 +61,19 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 40,
     fontFamily: "Avenir Next",
+    marginLeft: 10,
   },
   description: {
     padding: 20,
-    marginTop: 10,
+    marginTop: 5,
     fontWeight: "bold",
     fontSize: 15,
     textAlign: "center",
     fontFamily: "Avenir Next",
   },
   tinyLogo: {
-    width: 40,
-    height: 40,
+    width: 35,
+    height: 35,
   },
   buttonContainer: {
     alignItems: "center",

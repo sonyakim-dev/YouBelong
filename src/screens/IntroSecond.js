@@ -24,7 +24,7 @@ export default function IntroSecond({ navigation }) {
         <View style={styles.row}>
           <Image
             style={styles.tinyLogo}
-            source={require("../../assets/snapchat/vector.png")}
+            source={require("../../assets/snapchat/vector2.png")}
           />
           <Text style={styles.header}>Creator Hub</Text>
         </View>
@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 40,
     fontFamily: "Avenir Next",
+    marginLeft: 10,
   },
   description: {
     padding: 20,
@@ -73,8 +74,8 @@ const styles = StyleSheet.create({
     fontFamily: "Avenir Next",
   },
   tinyLogo: {
-    width: 40,
-    height: 40,
+    width: 35,
+    height: 35,
   },
   buttonContainer: {
     alignItems: "center",

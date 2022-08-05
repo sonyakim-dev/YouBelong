@@ -35,10 +35,19 @@ class FlatListItem extends Component {
             </Text>
             <View style={styles.categoryContainer}>
               <View style={styles.category}>
-                <Text style={styles.categoryText}>internship</Text>
+                <Text style={styles.categoryText}>
+                  {this.props.item.category1}
+                </Text>
               </View>
               <View style={styles.category}>
-                <Text style={styles.categoryText}>workshop</Text>
+                <Text style={styles.categoryText}>
+                  {this.props.item.category2}
+                </Text>
+              </View>
+              <View style={styles.category}>
+                <Text style={styles.categoryText}>
+                  {this.props.item.category3}
+                </Text>
               </View>
             </View>
           </View>
@@ -48,33 +57,47 @@ class FlatListItem extends Component {
   }
 }
 
-export default class ResourceScreen extends Component {
-  render() {
-    return (
+// export default class ResourceScreen extends Component {
+export default function ResourceScreen(props) {
+  console.log(props);
+  return (
+    <>
       <ScrollView style={styles.container}>
         <Text style={styles.header}>Youth Resources</Text>
         <FlatList
           style={styles.list}
           data={resourceData}
           renderItem={({ item, index }) => {
-            return <FlatListItem item={item} index={index}/>;
+            return <FlatListItem item={item} index={index} />;
           }}
         />
 
-        <Text style={styles.header}>Allies</Text>
+        <View
+          style={{
+            borderBottomColor: "black",
+            borderBottomWidth: StyleSheet.hairlineWidth,
+            paddingTop: 25,
+          }}
+        />
+
+        <Text style={styles.header2}>Allies</Text>
         <FlatList
           style={styles.list}
           data={resourceData2}
           renderItem={({ item, index }) => {
-            return (
-              <FlatListItem item={item} index={index}/>
-            );
+            return <FlatListItem item={item} index={index} />;
           }}
         />
       </ScrollView>
-    );
-  }
+    </>
+  );
 }
+
+// }
+// // render() {
+
+// }
+// }
 
 const styles = StyleSheet.create({
   container: {
@@ -98,10 +121,6 @@ const styles = StyleSheet.create({
   },
   resourceImg: {
     flex: 1,
-    width: "100%",
-    resizeMode: "cover",
-    borderRadius: 15,
-    // aspectRatio: 1,
   },
   resourceInfo: {
     flex: 2,
@@ -124,7 +143,16 @@ const styles = StyleSheet.create({
     flexDirection: "column",
   },
   header: {
-    marginTop: 50,
+    marginTop: 70,
+    marginBottom: 20,
+    textAlign: "center",
+    fontSize: 30,
+    fontWeight: "bold",
+    paddingBottom: 5,
+  },
+  header2: {
+    marginTop: 25,
+    marginBottom: 10,
     textAlign: "center",
     fontSize: 30,
     fontWeight: "bold",
