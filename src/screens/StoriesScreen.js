@@ -49,13 +49,15 @@ export default function StoriesScreen({ navigation, route }) {
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
-        {/* <Ionicons
-          name={"chevron-back-outline"}
-          color={"black"}
-          size={25}
-          style={styles.exitButton}
-        /> */}
-        <View style={{flex:1}}></View>
+        <TouchableOpacity style={{flex:1}}>
+          <Ionicons
+            name={"chevron-back-outline"}
+            color={"black"}
+            size={25}
+            style={styles.exitButton}
+          />
+        </TouchableOpacity>
+        {/* <View style={{flex:1}}></View> */}
         <Text style={styles.headerTitle}>The Spot</Text>
         <View style={{flex:1}}></View>
       </View>
@@ -116,6 +118,7 @@ export default function StoriesScreen({ navigation, route }) {
       >
         <Ionicons name="arrow-redo" color={'white'} size={23} style={{marginTop:4}}/>
       </TouchableOpacity> */}
+      
       <StatusBar style='dark'/>
     </View>
   );
@@ -141,7 +144,7 @@ const styles = StyleSheet.create({
   exitButton: {
     flex: 1,
     alignSelf: 'left',
-    
+    marginLeft: 3,
   },
   list: {
     flex: 1,

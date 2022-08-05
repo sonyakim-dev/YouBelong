@@ -20,6 +20,7 @@ export default function PostScreen({ navigation, route }) {
             style={styles.videoContainer}
             isMuted={false}
             // autoplay={true}
+            isLooping={true}
             source={{uri: url}}
             shouldPlay={true}
           />
