@@ -15,7 +15,7 @@ import React, { useState, useEffect, Component } from "react";
 import resourceData from "../components/ResourceData";
 import resourceData2 from "../components/ResourceData2";
 
-// console.reportErrorsAsExceptions = false;
+console.reportErrorsAsExceptions = false;
 class FlatListItem extends Component {
   render() {
     return (

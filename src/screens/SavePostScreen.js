@@ -9,9 +9,11 @@ import {
   TouchableOpacity,
   ScrollView,
   FlatList,
+  Pressable,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { useIsFocused } from "@react-navigation/native";
+import { RadioButton } from "react-native-paper";
 import {
   getStorage,
   ref,
@@ -26,8 +28,13 @@ import { useAuthentication } from "../utils/hooks/useAuthentication";
 import { StatusBar } from "expo-status-bar";
 import { useNavigation } from "@react-navigation/native";
 import { MaterialIcons } from "@expo/vector-icons";
+import { TEST_ID } from "react-native-gifted-chat";
 
 export default function SavePostScreen({ route }) {
+  const [firstButton, setFirstButton] = useState(true);
+  const [secondButton, setSecondButton] = useState(false);
+  const [thirdButton, setThirdButton] = useState(false);
+
   const storageRef = ref(getStorage(), `posts/${uuid()}.jpg`);
 
   const { user } = useAuthentication();
@@ -85,23 +92,49 @@ export default function SavePostScreen({ route }) {
           </View> */}
 
           <View style={styles.categoryContainer}>
-            <Text style={styles.categoryHeader}>Share your story to: </Text>
-            <FlatList
-              style={styles.listStyle}
-              keyExtractor={(key) => {
-                return key.index;
+            <Image
+              source={{
+                uri: "https://sdk.bitmoji.com/render/panel/10212012-99006779034_18-s5-v1.png?transparent=1&palette=1&scale=2",
               }}
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              data={names}
-              renderItem={({ item }) => {
-                return (
-                  <TouchableOpacity style={styles.categorySelection}>
-                    <Text style={styles.categoryText}>{item.name}</Text>
-                  </TouchableOpacity>
-                );
-              }}
+              style={styles.bitmoji}
             />
+            {/* <Text style={styles.categoryHeader}>Share your story to: </Text> */}
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => setFirstButton(!firstButton)}
+            >
+              <RadioButton
+                value="firstButton"
+                status={firstButton === true ? "checked" : "unchecked"}
+                color="#FFDD5E"
+                onPress={() => setFirstButton(!firstButton)}
+              />
+              <Text style={styles.buttonText}>Share to "The Spot"</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => setSecondButton(!secondButton)}
+            >
+              <RadioButton
+                value="secondButton"
+                status={secondButton === true ? "checked" : "unchecked"}
+                onPress={() => setSecondButton(!secondButton)}
+                color="#FFDD5E"
+              />
+              <Text style={styles.buttonText}>Share to "Spotlight"</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => setThirdButton(!thirdButton)}
+            >
+              <RadioButton
+                value="thirdButton"
+                status={thirdButton === true ? "checked" : "unchecked"}
+                onPress={() => setThirdButton(!thirdButton)}
+                color="#FFDD5E"
+              />
+              <Text style={styles.buttonText}>Share to "My Story"</Text>
+            </TouchableOpacity>
           </View>
           {/*
           <View style={styles.buttonContainer}>
@@ -128,7 +161,8 @@ export default function SavePostScreen({ route }) {
 
       <TouchableOpacity
         onPress={() => {
-          /*saveMediaToStorage();*/ navigation.navigate("Camera");
+          saveMediaToStorage();
+          navigation.navigate("Camera");
           navigation.navigate("Stories");
         }}
         style={styles.postButton}
@@ -136,8 +170,8 @@ export default function SavePostScreen({ route }) {
         <MaterialIcons
           name="file-upload"
           color={"white"}
-          size={23}
-          style={{ marginTop: 5 }}
+          size={30}
+          style={{ marginTop: 8 }}
         />
       </TouchableOpacity>
 
@@ -173,33 +207,21 @@ const styles = StyleSheet.create({
   //   margin: 20,
   //   flexDirection: 'row',
   // },
-  categoryContainer: {
-    marginVertical: 15,
-  },
   categoryHeader: {
     fontSize: 16,
     fontFamily: "Avenir Next",
   },
   buttonContainer: {
     flexDirection: "row",
-    margin: 20,
+    alignItems: "center",
+    width: 210,
+    marginBottom: 2,
   },
-  cancelButton: {
-    flex: 1,
-    flexDirection: "row",
-    padding: 10,
-    backgroundColor: "yellow",
-  },
-  // postButton: {
-  //   flex: 1,
-  //   flexDirection: 'row',
-  //   padding: 10,
-  // },
   postButton: {
     backgroundColor: "#5F86FF",
-    borderRadius: 20,
-    width: 35,
-    height: 35,
+    borderRadius: 50,
+    width: 45,
+    height: 45,
     position: "absolute",
     bottom: 20,
     right: 20,
@@ -212,10 +234,9 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 4,
   },
-  categorySelection: {
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-    backgroundColor: "#FBE869",
+  categoryContainer: {
+    marginVertical: 15,
+    // backgroundColor: "#FBE869",
     borderRadius: 20,
     marginRight: 5,
   },
@@ -226,5 +247,16 @@ const styles = StyleSheet.create({
   listStyle: {
     textAlign: "center",
     marginVertical: 5,
+  },
+  buttonText: {
+    fontSize: 18,
+    // fontWeight: 'bold'
+  },
+  bitmoji: {
+    position: "absolute",
+    bottom: 0,
+    right: 0,
+    height: 180,
+    width: 100,
   },
 });

@@ -15,4 +15,3 @@ export default function RootNavigation() {
 
   // return user ? <UserStack /> : <AuthStack />;
 }
-2;
