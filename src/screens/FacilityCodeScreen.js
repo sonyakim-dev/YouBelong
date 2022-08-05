@@ -1,10 +1,16 @@
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native'
-import React, { useRef } from 'react'
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+} from "react-native";
+import React, { useRef } from "react";
 
-export default function FacilityCodeScreen({navigation}) {
-  const [code, onChangeCode] = React.useState('');
+export default function FacilityCodeScreen({ navigation }) {
+  const [code, onChangeCode] = React.useState("");
   const inputRef = useRef();
-  
+
   return (
     <View style={styles.container}>
       <Text style={styles.description}>
@@ -14,54 +20,60 @@ export default function FacilityCodeScreen({navigation}) {
         <TextInput
           // ref={inputRef}
           autoFocus={true}
-          autoCapitalize={'characters'}
+          autoCapitalize={"characters"}
           style={styles.inputText}
           maxLength={7}
-          placeholder='_ _ _ _ _ _ _'
-          placeholderTextColor={'white'}
+          placeholder="_ _ _ _ _ _ _"
+          placeholderTextColor={"white"}
         />
       </View>
-      <TouchableOpacity onPress={()=>navigation.navigate('Camera')} style={styles.buttonContainer}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Camera")}
+        style={styles.buttonContainer}
+      >
         <Text style={styles.buttonText}>Enter</Text>
       </TouchableOpacity>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
-    alignItems: 'center',
+    backgroundColor: "white",
+    alignItems: "center",
     paddingVertical: 20,
     paddingHorizontal: 50,
   },
   description: {
     margin: 10,
-    textAlign: 'center',
+    textAlign: "center",
+    fontSize: 15,
+    // fontWeight: "bold",
+    fontFamily: "Avenir Next",
   },
   inputContainer: {
     marginVertical: 30,
-    backgroundColor: 'black',
+    backgroundColor: "black",
     paddingHorizontal: 30,
     paddingVertical: 20,
     borderRadius: 20,
   },
   inputText: {
     fontSize: 30,
-    color: 'white',
+    color: "white",
     marginHorizontal: 20,
     marginVertical: 10,
   },
   buttonContainer: {
-    backgroundColor: '#FFC700',
+    backgroundColor: "#FFC700",
     paddingVertical: 10,
     paddingHorizontal: 50,
     borderRadius: 30,
   },
   buttonText: {
     fontSize: 20,
-    fontWeight: 'bold',
-    color: 'white'
-  }
-})
+    fontWeight: "bold",
+    color: "white",
+  },
+});

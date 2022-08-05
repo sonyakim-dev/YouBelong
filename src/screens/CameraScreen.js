@@ -117,7 +117,7 @@ export default function CameraScreen({ navigation, focused }) {
           <View style={styles.modalView}>
             <Text style={styles.modalTitle}>ATTENTION</Text>
             <Text style={styles.modalText}>
-              You can choose to stay anonymous, please feel free to use our
+              You can choose to stay anonymous! please feel free to use our
               amazing Snap Lens to keep your identity private.
             </Text>
             <Pressable
@@ -177,14 +177,17 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 15,
     textAlign: "center",
+    fontFamily: "Avenir Next",
   },
   modalTitle: {
     fontSize: 20,
     fontWeight: "bold",
     marginVertical: 10,
+    fontFamily: "Avenir Next",
   },
   modalText: {
     marginBottom: 25,
     textAlign: "center",
+    fontFamily: "Avenir Next",
   },
 });

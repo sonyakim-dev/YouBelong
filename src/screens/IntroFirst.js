@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 40,
     fontFamily: "Avenir Next",
+    marginLeft: 12,
   },
   description: {
     padding: 20,
@@ -72,8 +73,8 @@ const styles = StyleSheet.create({
     fontFamily: "Avenir Next",
   },
   tinyLogo: {
-    width: 40,
-    height: 40,
+    width: 35,
+    height: 35,
   },
   buttonContainer: {
     alignItems: "center",

@@ -1,4 +1,5 @@
-import { image } from "react-native";
+import { Image } from "react-native";
+
 var resourceData = [
   {
     key: "1",
@@ -16,7 +17,8 @@ var resourceData = [
     name: "Kids In The Spotlight",
     description:
       "KITS is a Black-led, Los Angeles County-based organization that helps foster youth heal and grow from trauma through the power of storytelling and filmmaking in the KITS flagship. In the script-to-Screen program, foster youth ages 12-22 write, cast, and star in their short films, telling their stories their way.",
-    image: "../../assets/snapchat/1.png",
+    image:
+      "https://s3-alpha-sig.figma.com/img/27b9/572c/83cc398378b2d69c824152bab1f7f8ff?Expires=1660521600&Signature=QrhFC8~1pP0WSYJM9WadioVtvezFQHyA4tlkmVytfC3yX4VzcAet77FBjuX8BA7~NGLKbLJjcHrF6xyLevlDvbJl8IAcYgdsa0rO6tbQBaA3xJR46LdoRKOvlvfQoL4MUw8nGVmq07Cgw6Ew65Xebs9LJ5vKLPGFkrImgt3QjPnfqGxAs7MkgWmwaBYqoNV3DL7h0EKj952OJwZcoSrhYf-OJisRiFbq9CRdw0ASXdvae8gELsLG8cpZO9NQnvtHxwQQUsDQhcAvj1SQKDcpWz5CSqbNk3CRdLSK3VUVGX7SHCvLUZBMBvOskabsflTe42LD5mldkeDHcOPVgzWRdg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
     link: "https://www.kitsinc.org/",
     category1: "Career",
     category2: "Education",
@@ -48,6 +50,8 @@ var resourceData = [
     description:
       "iFoster collaborates with over 350  corporations, government agencies, and community organizations. This collaboration provides resources for foster care youth, from employment to access to mobile devices like smartphones.",
     link: "https://www.fosterclub.com/",
+    image:
+      "https://s3-alpha-sig.figma.com/img/e309/f0f5/5968cf164c06febf5687391e20209a03?Expires=1660521600&Signature=hwJlAAmoJOnVptdMscH-869CZ~8z8EX0aso~lSlzhSQ3~LmY1isIkJmlcpcdiZsp6RBmbi7JzPKlg-J9u3o-8M1ySjEPGzqWozo0HL2Fr1M~VyCutgwAGFicBIjhNuNpma6JwhjiGMVaavpFBk0-ydrQWGoPCok7vxOViLRmRK6~rUPajAS3iCdD12G5kdyVOmv6PRKGnOxXQZfoKF9aMtCaKuXPCuk~IgEqdxucleDFpJM-jJamBrmCtWn-GvOb-pqRue44x4aFDCXVm6I0aChW13ny59lvczVPpJ8YVfsQzOHZscC1mmAFgt6Paxb996iylNsz-1dGTZ3hFRhFqA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
     category1: "Services",
     category2: "Career",
     category3: "Technology",

@@ -23,7 +23,7 @@ export default function CameraStack({ navigation }) {
   return (
     <Stack.Navigator initialRouteName="FacilityCode">
       <Stack.Screen
-        name ="FacilityCode"
+        name="FacilityCode"
         component={FacilityCodeScreen}
         options={{
           headerTitle: () => (
@@ -53,7 +53,7 @@ export default function CameraStack({ navigation }) {
         component={SavePostScreen}
         options={{
           headerTitle: () => (
-            <Text style={{ fontSize: 20, fontWeight: "bold" }}>
+            <Text style={{ fontSize: 27, fontWeight: "bold" }}>
               Share Your Story
             </Text>
           ),
