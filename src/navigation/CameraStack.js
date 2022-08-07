@@ -10,7 +10,6 @@ import FacilityCodeScreen from "../screens/FacilityCodeScreen";
 const Stack = createStackNavigator();
 
 export default function CameraStack({ navigation }) {
-  console.log("navigation cam", navigation);
   // React.useEffect(() => {
   //   const unsubscribe = navigation.addListener('tabPress', (e) => {
   //     // Prevent default behavior

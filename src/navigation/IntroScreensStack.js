@@ -15,7 +15,7 @@ import UserStack from "./UserStack";
 const Stack = createStackNavigator();
 
 export default function IntroScreensStack({ navigation }) {
-  console.log("navigation second", navigation);
+
   return (
     <Stack.Navigator initialRouteName="First">
       <Stack.Screen

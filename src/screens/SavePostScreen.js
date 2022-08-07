@@ -1,24 +1,13 @@
 import React, { useState, useEffect } from "react";
 import {
-  View,
-  Image,
-  Text,
-  StyleSheet,
-  Button,
-  TextInput,
-  TouchableOpacity,
-  ScrollView,
-  FlatList, Pressable
+  View, Image, Text, StyleSheet, Button, TextInput,
+  TouchableOpacity, ScrollView, FlatList, Pressable
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { useIsFocused } from "@react-navigation/native";
-import { RadioButton } from 'react-native-paper';
 import {
-  getStorage,
-  ref,
-  uploadBytesResumable,
-  getDownloadURL,
-  getMetadata,
+  getStorage, ref, uploadBytesResumable,
+  getDownloadURL, getMetadata,
 } from "firebase/storage";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import db from "../../firebase";
@@ -27,12 +16,12 @@ import { useAuthentication } from "../utils/hooks/useAuthentication";
 import { StatusBar } from "expo-status-bar";
 import { useNavigation } from "@react-navigation/native";
 import { MaterialIcons } from "@expo/vector-icons";
-import { TEST_ID } from "react-native-gifted-chat";
 
 export default function SavePostScreen({ route }) {
   const [firstButton, setFirstButton] = useState(true);
   const [secondButton, setSecondButton] = useState(false);
   const [thirdButton, setThirdButton] = useState(false);
+  const [fourthButton, setFourthButton] = useState(false);
 
   const storageRef = ref(getStorage(), `posts/${uuid()}.jpg`);
 
@@ -91,34 +80,30 @@ export default function SavePostScreen({ route }) {
           </View> */}
 
           <View style={styles.categoryContainer}>
-            <Image source={{uri:'https://sdk.bitmoji.com/render/panel/10212012-99006779034_18-s5-v1.png?transparent=1&palette=1&scale=2'}} style={styles.bitmoji}/>
+            <Image source={{uri:'https://s3-alpha-sig.figma.com/img/7e84/644c/c7c94eecf41e1eceecbf42ece84f3490?Expires=1660521600&Signature=ePbnB665O1LRZ58hqcdnAQtuVVe3E3Qcul0MMNm83XvA8DRz0dz~P1YiFcOqTLjW454-hS5PmgdpM4-UGSkdPTONDPK7GJvO8G1~sxIKdjcxL-17U6G4Upu5zadzAy1wcwn8aM-IwwdC4roU17fA~1WTtJk-a6qQDIPYdz9ngvG6XirKoEekatQV4Qg6P84OWeYb18n~0mWxjNftGheD7PFxGfds3O1KMbnt7c7u4Q-NlkLJ9Z097x31GbXhakgRyBhkWTZW8yaopc3oHDMDdMI5IcnWK87YREoKmo~a0yF067g~7MGNscH7v6CiEUQ1E~dZonpNjZ9eRex89qX49Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'}} style={styles.bitmoji}/>
             {/* <Text style={styles.categoryHeader}>Share your story to: </Text> */}
             <TouchableOpacity style={styles.buttonContainer} onPress={() => setFirstButton((!firstButton))}>
-              <RadioButton
-                value="firstButton"
-                status={firstButton === true ? 'checked' : 'unchecked'}
-                color='#FFDD5E'
-                onPress={() => setFirstButton((!firstButton))}
-              />
-              <Text style={styles.buttonText}>Share to "The Spot"</Text>
+              <Ionicons name={firstButton? "radio-button-on-outline" : "radio-button-off-outline"}
+                color={firstButton? "#FFDD5E" : "gray"} size={20} style={{marginRight: 5}}/>
+              <Text style={styles.buttonText}>Share to </Text>
+              <Text style={styles.buttonText2}>The Spot</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonContainer} onPress={() => setSecondButton((!secondButton))}>
-              <RadioButton
-                value="secondButton"
-                status={secondButton === true ? 'checked' : 'unchecked'}
-                onPress={() => setSecondButton((!secondButton))}
-                color='#FFDD5E'
-              />
-              <Text style={styles.buttonText}>Share to "Spotlight"</Text>
+              <Ionicons name={secondButton? "radio-button-on-outline" : "radio-button-off-outline"}
+                color={secondButton? "#FFDD5E" : "gray"} size={20} style={{marginRight: 5}}/>
+              <Text style={styles.buttonText}>Share to </Text>
+              <Text style={styles.buttonText2}>Spotlight</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonContainer} onPress={() => setThirdButton((!thirdButton))}>
-              <RadioButton
-                value="thirdButton"
-                status={thirdButton === true ? 'checked' : 'unchecked'}
-                onPress={() => setThirdButton((!thirdButton))}
-                color='#FFDD5E'
-              />
-              <Text style={styles.buttonText}>Share to "My Story"</Text>
+              <Ionicons name={thirdButton? "radio-button-on-outline" : "radio-button-off-outline"}
+                  color={thirdButton? "#FFDD5E" : "gray"} size={20} style={{marginRight: 5}}/>
+              <Text style={styles.buttonText}>Share to </Text>
+              <Text style={styles.buttonText2}>My Story</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonContainer} onPress={() => setFourthButton((!fourthButton))}>
+              <Ionicons name={fourthButton? "radio-button-on-outline" : "radio-button-off-outline"}
+                  color={fourthButton? "#FFDD5E" : "gray"} size={20} style={{marginRight: 5}}/>
+              <Text style={styles.buttonText}>Save Snap</Text>
             </TouchableOpacity>
           </View>
           {/*
@@ -166,7 +151,7 @@ export default function SavePostScreen({ route }) {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
+    flex: 1,
     flexGrow: 1,
     backgroundColor: "white",
     justifyContent: "center",
@@ -198,8 +183,12 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: "row",
     alignItems: 'center',
-    width: 210,
-    marginBottom: 2,
+    // width: 200,
+    paddingBottom: 8,
+    marginBottom: 8,
+    paddingLeft: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(52, 52, 52, 0.2)',
   },
   postButton: {
     backgroundColor: "#5F86FF",
@@ -219,7 +208,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
   },
   categoryContainer: {
-    marginVertical: 15,
+    marginTop: 15,
     // backgroundColor: "#FBE869",
     borderRadius: 20,
     marginRight: 5,
@@ -233,14 +222,18 @@ const styles = StyleSheet.create({
     marginVertical: 5,
   },
   buttonText: {
-    fontSize: 18,
-    // fontWeight: 'bold'
+    fontSize: 16,
+  },
+  buttonText2: {
+    fontSize: 16,
+    fontWeight: 'bold'
   },
   bitmoji: {
     position: 'absolute',
     bottom: 0,
     right: 0,
-    height: 180,
-    width: 100,
+    height: 200,
+    width: 125,
+    zIndex: 10
   }
 });
