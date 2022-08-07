@@ -32,7 +32,7 @@ Our team found that foster youth have incredible stories to share, but no platfo
 
 ~ | Sign Up/Sign In | Intro | Facility Authentication
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-**Samples** | <img src="https://github.com/sonyakim-dev/git-practice/blob/main/foster-youth-thespot-small.gif?raw=true" width="180"/> | <img src="https://github.com/sonyakim-dev/git-practice/blob/main/sonya-small.gif?raw=true" width="180"/> | 
+**Samples** | <img src="https://github.com/sonyakim-dev/git-practice/blob/main/foster-youth-login.gif?raw=true" width="180"/> | intro 3 pages | facility code
 
 ## Tools Used
 
