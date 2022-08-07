@@ -9,4 +9,4 @@ Step 1: `yarn install`
 
 Step 2: `expo start --tunnel`
 
-<img src="https://github.com/sonyakim-dev/git-practice/blob/main/foster-youth-sonya-small.gif?raw=true" width="180"/>
+<img src="https://github.com/sonyakim-dev/git-practice/blob/main/sonya-small.gif?raw=true" width="180"/>
