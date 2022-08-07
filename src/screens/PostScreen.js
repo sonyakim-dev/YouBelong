@@ -61,17 +61,19 @@ export default function PostScreen({ navigation, route }) {
             />
           </View>
           <View style={styles.modalViewTop}>
-            <Text style={styles.modalText}>Send your love❤️</Text>
+            {/* <Text style={styles.modalText}>Send Love❤️</Text> */}
+            <Text style={styles.modalText}>Send Love</Text>
             <View style={styles.reactionContainer}>
               <TouchableOpacity
                 onPress={() => setFilterVisible(!filterVisible)}
               >
                 <Image
                   source={{
-                    uri: "https://s3-alpha-sig.figma.com/img/90b1/42d9/d27efaeca936c876fc8ec93652c5068c?Expires=1660521600&Signature=cTrasSvkyoXoRSvvtqFh27KRONJk0SdCSnMeNAOsgQTrSL1NYSGZQato9JLX3YLEAgJf6a14bamWC2B-WWmhmwsXNMU1m0ofN67R4WfqFw2vRLx929lQlE0fH3xCJf81oaj4KNY7Y0cPh1-wIu~C0bWDTjVgIH-lfHtdi-2tb-nhbwHzltNDEfzQJRY0P9DHNBIdq1iXG9kXfp-muJcDr0fI2BviBNG0CElMFyeDlkirVSuCPPF~DU78OSocKlKeD0esK7w-7nnsiJTUT~~cWyC5uk2yk-TA5R~M1s~mdRSCFUD8kdjovAxk3OnaOr-NoVvV~ruWrvWlY3d21Ni6gQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+                    uri: "https://s3-alpha-sig.figma.com/img/dd3f/368f/2a4bb4dc7861fb0f2b874227a5a8afdc?Expires=1660521600&Signature=ghPdw52X6j~jMfmgZD3SMkqLYA1UAhsmXnq5kI1b6k7g-iAEAiFgQkpjCkRWTMND9n0k-w1zwm79QhtYggOOdWu8lcA9FMACMIupIXvnVr~wqGxu2~eAMbcDXzxl-O9aH6G9u6xLF8oSMCoJ1dhI4Yx9WV2eOBCcpBIS9XhePrkYX~xDrW2kxjSOszB4~C9KBjDE~oOw4gva2tkBz8UnQ3eKru-pi~4XFjuHmgsaARChqY5N8jKcRAOnupozNMMccnEST2mb4vVas3XTAnmkP3Yn3nqBugfgVnO5ZhI5TXatg248zhHMxIYrZ4G4lELVsdHbSyipYiDD91bYS6dFwg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
                   }}
                   style={styles.reaction}
                 />
+                <Text style={styles.caption}>you got this</Text>
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => setFilterVisible(!filterVisible)}
@@ -82,6 +84,7 @@ export default function PostScreen({ navigation, route }) {
                   }}
                   style={styles.reaction}
                 />
+                <Text style={styles.caption}>cheers</Text>
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => setFilterVisible(!filterVisible)}
@@ -92,16 +95,18 @@ export default function PostScreen({ navigation, route }) {
                   }}
                   style={styles.reaction}
                 />
+                <Text style={styles.caption}>good job</Text>
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => setFilterVisible(!filterVisible)}
               >
                 <Image
                   source={{
-                    uri: "https://s3-alpha-sig.figma.com/img/dd3f/368f/2a4bb4dc7861fb0f2b874227a5a8afdc?Expires=1660521600&Signature=ghPdw52X6j~jMfmgZD3SMkqLYA1UAhsmXnq5kI1b6k7g-iAEAiFgQkpjCkRWTMND9n0k-w1zwm79QhtYggOOdWu8lcA9FMACMIupIXvnVr~wqGxu2~eAMbcDXzxl-O9aH6G9u6xLF8oSMCoJ1dhI4Yx9WV2eOBCcpBIS9XhePrkYX~xDrW2kxjSOszB4~C9KBjDE~oOw4gva2tkBz8UnQ3eKru-pi~4XFjuHmgsaARChqY5N8jKcRAOnupozNMMccnEST2mb4vVas3XTAnmkP3Yn3nqBugfgVnO5ZhI5TXatg248zhHMxIYrZ4G4lELVsdHbSyipYiDD91bYS6dFwg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+                    uri: "https://s3-alpha-sig.figma.com/img/90b1/42d9/d27efaeca936c876fc8ec93652c5068c?Expires=1660521600&Signature=cTrasSvkyoXoRSvvtqFh27KRONJk0SdCSnMeNAOsgQTrSL1NYSGZQato9JLX3YLEAgJf6a14bamWC2B-WWmhmwsXNMU1m0ofN67R4WfqFw2vRLx929lQlE0fH3xCJf81oaj4KNY7Y0cPh1-wIu~C0bWDTjVgIH-lfHtdi-2tb-nhbwHzltNDEfzQJRY0P9DHNBIdq1iXG9kXfp-muJcDr0fI2BviBNG0CElMFyeDlkirVSuCPPF~DU78OSocKlKeD0esK7w-7nnsiJTUT~~cWyC5uk2yk-TA5R~M1s~mdRSCFUD8kdjovAxk3OnaOr-NoVvV~ruWrvWlY3d21Ni6gQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
                   }}
                   style={styles.reaction}
                 />
+                <Text style={styles.caption}>awesome</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -196,13 +201,15 @@ const styles = StyleSheet.create({
     textAlign: "center",
     paddingVertical: 10,
     paddingHorizontal: "40%",
+    fontFamily: "Avenir Next",
   },
   modalText: {
     marginTop: 10,
     marginLeft: 10,
     textAlign: "center",
     fontWeight: "bold",
-    fontSize: 15,
+    fontSize: 19,
+    fontFamily: "Avenir Next",
   },
   reactionContainer: {
     width: "100%",
@@ -213,5 +220,9 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     borderRadius: 10,
+  },
+  caption: {
+    textAlign: "center",
+    fontFamily: "Avenir Next",
   },
 });

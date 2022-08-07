@@ -164,6 +164,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
     paddingBottom: 5,
+    fontFamily: "Avenir Next",
   },
   header2: {
     marginTop: 25,
@@ -172,6 +173,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
     paddingBottom: 5,
+    fontFamily: "Avenir Next",
   },
   list: {
     flex: 1,

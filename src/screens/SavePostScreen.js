@@ -34,6 +34,7 @@ export default function SavePostScreen({ route }) {
   const [firstButton, setFirstButton] = useState(true);
   const [secondButton, setSecondButton] = useState(false);
   const [thirdButton, setThirdButton] = useState(false);
+  const [fourthButton, setFourthButton] = useState(false);
 
   const storageRef = ref(getStorage(), `posts/${uuid()}.jpg`);
 
@@ -109,7 +110,8 @@ export default function SavePostScreen({ route }) {
                 color="#FFDD5E"
                 onPress={() => setFirstButton(!firstButton)}
               />
-              <Text style={styles.buttonText}>Share to "The Spot"</Text>
+              <Text style={styles.buttonText}>Share to</Text>
+              <Text style={styles.locationText}> The Spot</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.buttonContainer}
@@ -121,7 +123,8 @@ export default function SavePostScreen({ route }) {
                 onPress={() => setSecondButton(!secondButton)}
                 color="#FFDD5E"
               />
-              <Text style={styles.buttonText}>Share to "Spotlight"</Text>
+              <Text style={styles.buttonText}>Share to</Text>
+              <Text style={styles.locationText}> Spotlight</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.buttonContainer}
@@ -133,7 +136,21 @@ export default function SavePostScreen({ route }) {
                 onPress={() => setThirdButton(!thirdButton)}
                 color="#FFDD5E"
               />
-              <Text style={styles.buttonText}>Share to "My Story"</Text>
+              <Text style={styles.buttonText}>Share to</Text>
+              <Text style={styles.locationText}> My Story</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => setFourthButton(!fourthButton)}
+            >
+              <RadioButton
+                value="fourthButton"
+                status={fourthButton === true ? "checked" : "unchecked"}
+                onPress={() => setFourthButton(!fourthButton)}
+                color="#FFDD5E"
+              />
+              <Text style={styles.buttonText}>Save to </Text>
+              <Text style={styles.locationText}>Gallery</Text>
             </TouchableOpacity>
           </View>
           {/*
@@ -250,7 +267,12 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 18,
-    // fontWeight: 'bold'
+    fontFamily: "Avenir Next",
+  },
+  locationText: {
+    fontSize: 18,
+    fontWeight: "bold",
+    fontFamily: "Avenir Next",
   },
   bitmoji: {
     position: "absolute",

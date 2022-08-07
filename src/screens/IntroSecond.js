@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get("window").width,
   },
   row: {
-    marginTop: 330,
+    marginTop: 335,
     paddingVertical: 15,
     paddingHorizontal: 10,
     flexDirection: "row",
