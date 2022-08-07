@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get("window").width,
   },
   row: {
-    marginTop: 300,
+    marginTop: 320,
     paddingVertical: 15,
     paddingHorizontal: 10,
     flexDirection: "row",
@@ -64,8 +64,8 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   description: {
-    padding: 20,
-    marginTop: 5,
+    padding: 10,
+    marginTop: 2,
     fontWeight: "bold",
     fontSize: 15,
     textAlign: "center",
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   },
   nextButton: {
     borderRadius: 20,
-    marginTop: 20,
+    marginTop: 15,
     padding: 10,
     elevation: 2,
     backgroundColor: "#EC6060",

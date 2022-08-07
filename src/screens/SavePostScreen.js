@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from "react";
 import {
-  View, Image, Text, StyleSheet, Button, TextInput,
-  TouchableOpacity, ScrollView, FlatList, Pressable
+  View,
+  Image,
+  Text,
+  StyleSheet,
+  Button,
+  TextInput,
+  TouchableOpacity,
+  ScrollView,
+  FlatList,
+  Pressable,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { useIsFocused } from "@react-navigation/native";
+import { RadioButton } from "react-native-paper";
 import {
   getStorage, ref, uploadBytesResumable,
   getDownloadURL, getMetadata,
@@ -131,7 +140,8 @@ export default function SavePostScreen({ route }) {
 
       <TouchableOpacity
         onPress={() => {
-          saveMediaToStorage(); navigation.navigate("Camera");
+          saveMediaToStorage();
+          navigation.navigate("Camera");
           navigation.navigate("Stories");
         }}
         style={styles.postButton}
@@ -176,10 +186,6 @@ const styles = StyleSheet.create({
   //   margin: 20,
   //   flexDirection: 'row',
   // },
-  categoryHeader: {
-    fontSize: 16,
-    fontFamily: "Avenir Next",
-  },
   buttonContainer: {
     flexDirection: "row",
     alignItems: 'center',
@@ -222,18 +228,19 @@ const styles = StyleSheet.create({
     marginVertical: 5,
   },
   buttonText: {
-    fontSize: 16,
+    fontSize: 18,
   },
   buttonText2: {
-    fontSize: 16,
-    fontWeight: 'bold'
+    fontSize: 18,
+    fontWeight: 'bold',
+    fontFamily: "Avenir Next",
   },
   bitmoji: {
-    position: 'absolute',
+    position: "absolute",
     bottom: 0,
     right: 0,
-    height: 200,
+    height: 203,
     width: 125,
     zIndex: 10
-  }
+  },
 });

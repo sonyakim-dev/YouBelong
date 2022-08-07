@@ -52,7 +52,13 @@ export default function CameraStack({ navigation }) {
         component={SavePostScreen}
         options={{
           headerTitle: () => (
-            <Text style={{ fontSize: 27, fontWeight: "bold" }}>
+            <Text
+              style={{
+                fontSize: 27,
+                fontWeight: "bold",
+                fontFamily: "Avenir Next",
+              }}
+            >
               Share Your Story
             </Text>
           ),

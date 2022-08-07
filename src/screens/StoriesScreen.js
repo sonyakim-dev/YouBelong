@@ -49,7 +49,7 @@ export default function StoriesScreen({ navigation, route }) {
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
-        <TouchableOpacity style={{flex:1}}>
+        <TouchableOpacity style={{ flex: 1 }}>
           <Ionicons
             name={"chevron-back-outline"}
             color={"black"}
@@ -59,7 +59,7 @@ export default function StoriesScreen({ navigation, route }) {
         </TouchableOpacity>
         {/* <View style={{flex:1}}></View> */}
         <Text style={styles.headerTitle}>The Spot</Text>
-        <View style={{flex:1}}></View>
+        <View style={{ flex: 1 }}></View>
       </View>
       {posts.length ? (
         <FlatList
@@ -118,8 +118,8 @@ export default function StoriesScreen({ navigation, route }) {
       >
         <Ionicons name="arrow-redo" color={'white'} size={23} style={{marginTop:4}}/>
       </TouchableOpacity> */}
-      
-      <StatusBar style='dark'/>
+
+      <StatusBar style="dark" />
     </View>
   );
 }
@@ -130,20 +130,21 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   headerContainer: {
-    flexDirection: 'row',
+    flexDirection: "row",
     marginTop: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   headerTitle: {
-    textAlign: 'center',
+    textAlign: "center",
     fontSize: 30,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     paddingBottom: 5,
+    fontFamily: "Avenir Next",
   },
   exitButton: {
     flex: 1,
-    alignSelf: 'left',
+    alignSelf: "left",
     marginLeft: 3,
   },
   list: {

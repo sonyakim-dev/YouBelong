@@ -24,10 +24,22 @@ class FlatListItem extends Component {
         onPress={() => Linking.openURL(this.props.item.link)}
       >
         <View style={styles.resourceCard}>
-          <Image
-            style={styles.resourceImg}
-            source={{ uri: this.props.item.image }}
-          />
+          <View
+            style={{
+              width: "30%",
+              padding: 5,
+              justifyContent: "center",
+              alignItems: "center",
+              borderTopLeftRadius: 15,
+              borderBottomLeftRadius: 15,
+            }}
+          >
+            <Image
+              style={styles.resourceImg}
+              source={{ uri: this.props.item.image }}
+            />
+          </View>
+
           <View style={styles.resourceInfo}>
             <Text style={styles.title}>{this.props.item.name}</Text>
             <Text style={styles.description} numberOfLines={4}>
@@ -120,7 +132,10 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
   },
   resourceImg: {
-    flex: 1,
+    resizeMode: "contain",
+    // resizeMode: "fit",
+    width: "100%",
+    aspectRatio: 1 / 1,
   },
   resourceInfo: {
     flex: 2,
@@ -149,6 +164,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
     paddingBottom: 5,
+    fontFamily: "Avenir Next",
   },
   header2: {
     marginTop: 25,
@@ -157,6 +173,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
     paddingBottom: 5,
+    fontFamily: "Avenir Next",
   },
   list: {
     flex: 1,
@@ -175,5 +192,7 @@ const styles = StyleSheet.create({
   categoryText: {
     fontSize: 10,
     color: "white",
+    fontWeight: "bold",
+    fontFamily: "Avenir Next",
   },
 });
