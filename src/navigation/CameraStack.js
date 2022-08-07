@@ -10,7 +10,6 @@ import FacilityCodeScreen from "../screens/FacilityCodeScreen";
 const Stack = createStackNavigator();
 
 export default function CameraStack({ navigation }) {
-  console.log("navigation cam", navigation);
   // React.useEffect(() => {
   //   const unsubscribe = navigation.addListener('tabPress', (e) => {
   //     // Prevent default behavior
@@ -27,7 +26,7 @@ export default function CameraStack({ navigation }) {
         component={FacilityCodeScreen}
         options={{
           headerTitle: () => (
-            <Text style={{ fontSize: 20, fontWeight: "bold" }}>
+            <Text style={{ fontSize: 30, fontWeight: "bold", fontFamily: "Avenir Next", marginTop: 6 }}>
               Facility Code
             </Text>
           ),

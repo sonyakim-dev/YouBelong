@@ -7,6 +7,9 @@ import {
   FlatList,
   TouchableOpacity,
   Button,
+  Alert,
+  Modal,
+  Pressable,
   RefreshControl,
 } from "react-native";
 import { collection, getDocs, onSnapshot } from "firebase/firestore";
@@ -23,6 +26,7 @@ export default function StoriesScreen({ navigation, route }) {
   const videoRef = useRef(null);
   const [posts, setPosts] = useState([]);
   const [refresh, setRefresh] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
 
   const onRefresh = React.useCallback(() => {
     setRefresh(true);
@@ -48,16 +52,53 @@ export default function StoriesScreen({ navigation, route }) {
 
   return (
     <View style={styles.container}>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}
+      >
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <Text style={styles.modalTitle}>
+              Are you sure you want to leave?
+            </Text>
+            <Pressable
+              style={styles.buttonClose}
+              onPress={() => setModalVisible(!modalVisible)}
+            >
+              <Text style={styles.buttonCloseText}>Leave</Text>
+            </Pressable>
+
+            <Pressable onPress={() => setModalVisible(!modalVisible)}>
+              <Text style={styles.buttonCloseText2}>Cancel</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
+
       <View style={styles.headerContainer}>
-        <TouchableOpacity style={{ flex: 1 }}>
+        {/* <TouchableOpacity style={{ flex: 1 }}>
+          <Ionicons
+            name={"chevron-back-outline"}
+            color={"black"}
+            size={25}
+            style={styles.exitButton}
+          /> */}
+        <Pressable
+          style={[styles.button, styles.buttonOpen]}
+          onPress={() => setModalVisible(true)}
+        >
           <Ionicons
             name={"chevron-back-outline"}
             color={"black"}
             size={25}
             style={styles.exitButton}
           />
-        </TouchableOpacity>
-        {/* <View style={{flex:1}}></View> */}
+        </Pressable>
+
         <Text style={styles.headerTitle}>The Spot</Text>
         <View style={{ flex: 1 }}></View>
       </View>
@@ -136,6 +177,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   headerTitle: {
+    flex: 7,
     textAlign: "center",
     fontSize: 30,
     fontWeight: "bold",
@@ -145,7 +187,8 @@ const styles = StyleSheet.create({
   exitButton: {
     flex: 1,
     alignSelf: "left",
-    marginLeft: 3,
+    marginLeft: 10,
+    marginTop: 2.5,
   },
   list: {
     flex: 1,
@@ -194,5 +237,56 @@ const styles = StyleSheet.create({
     bottom: 20,
     right: 20,
     alignItems: "center",
+  },
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  modalView: {
+    width: "80%",
+    margin: 20,
+    backgroundColor: "white",
+    borderRadius: 20,
+    padding: 25,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  modalTitle: {
+    textAlign: "center",
+    fontSize: 20,
+    fontWeight: "bold",
+    marginVertical: 10,
+    marginHorizontal: 15,
+    fontFamily: "Avenir Next",
+  },
+  buttonClose: {
+    borderRadius: 20,
+    padding: 10,
+    elevation: 2,
+    backgroundColor: "#5F86FF",
+    width: 150,
+  },
+  buttonCloseText: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 15,
+    textAlign: "center",
+    fontFamily: "Avenir Next",
+  },
+  buttonCloseText2: {
+    color: "#B7B7B7",
+    padding: 10,
+    fontWeight: "bold",
+    fontSize: 15,
+    textAlign: "center",
+    fontFamily: "Avenir Next",
   },
 });

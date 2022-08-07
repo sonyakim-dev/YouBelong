@@ -16,7 +16,7 @@ import IntroScreensStack from "./IntroScreensStack";
 const Stack = createStackNavigator();
 
 export default function IntroStack({ navigation }) {
-  console.log("navigation first", navigation);
+
   return (
     <NavigationContainer>
       <Stack.Navigator>

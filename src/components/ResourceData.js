@@ -7,7 +7,7 @@ var resourceData = [
     description:
       "The California Foster Youth Bill of Rights was written by the California Youth Connection, a statewide organization of youth in the foster care system. It outlines the personal rights and protections for individuals who are in out-of-home care.",
     image:
-      "https://advokids.org/wp-content/uploads/2022/04/Logo-PNG-Transparent.png",
+      "https://s3-alpha-sig.figma.com/img/28c2/8937/ffc7d818d27b34fdc1ef9b017e72a101?Expires=1660521600&Signature=JZ1jtKtmAWxUb0r8Jx5AU4mDXNaIqDShCvRApaoJhQDY17T7gUR~qcWiSvfGN0JJWtwImqjPd-NJci18-nRtD30JUJErrBkYbZimmDz9MNJ264qYH54RjssAu7wSdZqqugXhbbnN3K9rVAUzRoW2SaBpMtpdlX-JleIpZXMGBfHkDa0gMtLSvn0~7TwtfHOlz5a~dtjIeofL-F5Wyh1c~GhxChS68YVAmmCTceL4p4a40RMRtzkVFFA8fRad-sfYDe0UY44MZVDj0CtvgLlD9AdBOR-dY~CgOadC42-7HsMFehk~9c0BclKtpSaK-Doo0ppRa0AnVsUGddqBRY8r4w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
     link: "https://www.cdss.ca.gov/cdssweb/entres/forms/English/pub396.pdf",
     category1: "Education",
     category2: "Legal",
@@ -30,7 +30,8 @@ var resourceData = [
     name: "CASA",
     description:
       "CASA of Los Angeles organizes the community to take action and advocate for children and families in LA County’s child welfare and juvenile justice systems. We train committed, consistent and caring adults who provide equitable access to resources and life-affirming connections.",
-    image: "http://oregonbhf.org/wp-content/uploads/2019/10/casa-logo.png",
+    image:
+      "https://s3-alpha-sig.figma.com/img/59ae/908e/3ee4f3366d31d6bf4dbd2542dbea8628?Expires=1660521600&Signature=ISYoJxzvnH3tSSo8qhzvaksd0y5Wut9W5lAscMjJ3P-JkGlu8VneE56i2Cp6OubC3T-AofhuPw6ORz0j2hmHyfluIq6oHpbO390FaQUbLEbbXeKepMWeMAa2p~FYK5NyOwYSd5fDz89Bf3wynZ7C3cCO1bkhsXNU47mYYBhZrwWffObT8R8-27f8eorhw~dVtguO1I5zXfbN6Ru1a3VtYwMxPEoYdvj7N8Ng2IroaW-HZwFP-Kx3Ic6WaPZdpYLxv8MW9CWqp6a2pIFqTSzLkJwQLNSP4oI5HqGAmi55Pks4Kcj5w6Hkf-4sksUaH6pG3Ks1HwiG4FWgWWOfyNoEYQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
     link: "https://casala.org/",
     category1: "Coaching",
     category2: "Outreach",

@@ -14,7 +14,7 @@ export default function FacilityCodeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.description}>
-        Enter your facility code that was given to you by your organization.
+        Enter the facility code that was given to you by your organization.
       </Text>
       <View style={styles.inputContainer}>
         <TextInput
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   description: {
     margin: 10,
     textAlign: "center",
-    fontSize: 15,
+    fontSize: 16,
     // fontWeight: "bold",
     fontFamily: "Avenir Next",
   },
@@ -75,5 +75,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     color: "white",
+    fontFamily: "Avenir Next",
   },
 });

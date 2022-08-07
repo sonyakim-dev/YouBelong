@@ -24,15 +24,6 @@ export default function CameraScreen({ navigation, focused }) {
   const [photo, setPhoto] = useState();
   const [modalVisible, setModalVisible] = useState(true);
 
-  // React.useEffect(() => {
-  //   const unsubscribe = navigation.addListener('tabPress', (e) => {
-  //     // Prevent default behavior
-  //     console.log("SAVEPOSTSCREEN")
-  //     navigation.popToTop();
-  //   });
-  //   return unsubscribe;
-  // }, [navigation]);
-
   useEffect(() => {
     (async () => {
       const cameraPermission = await Camera.requestCameraPermissionsAsync();
@@ -117,8 +108,8 @@ export default function CameraScreen({ navigation, focused }) {
           <View style={styles.modalView}>
             <Text style={styles.modalTitle}>ATTENTION</Text>
             <Text style={styles.modalText}>
-              You can choose to stay anonymous! please feel free to use our
-              amazing Snap Lens to keep your identity private.
+              You can choose to stay anonymous! Feel free to use our amazing
+              Snap Lens to keep your identity private.
             </Text>
             <Pressable
               style={styles.buttonClose}

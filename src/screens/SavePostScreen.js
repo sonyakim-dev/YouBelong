@@ -28,7 +28,6 @@ import { useAuthentication } from "../utils/hooks/useAuthentication";
 import { StatusBar } from "expo-status-bar";
 import { useNavigation } from "@react-navigation/native";
 import { MaterialIcons } from "@expo/vector-icons";
-import { TEST_ID } from "react-native-gifted-chat";
 
 export default function SavePostScreen({ route }) {
   const [firstButton, setFirstButton] = useState(true);
@@ -63,21 +62,6 @@ export default function SavePostScreen({ route }) {
     });
   };
 
-  const names = [
-    {
-      index: "1",
-      name: "The Spot",
-    },
-    {
-      index: "2",
-      name: "Spotlight ",
-    },
-    {
-      index: "3",
-      name: " Other Platforms ",
-    },
-  ];
-
   return (
     <View style={styles.container}>
       {isFocused ? (
@@ -104,53 +88,68 @@ export default function SavePostScreen({ route }) {
               style={styles.buttonContainer}
               onPress={() => setFirstButton(!firstButton)}
             >
-              <RadioButton
-                value="firstButton"
-                status={firstButton === true ? "checked" : "unchecked"}
-                color="#FFDD5E"
-                onPress={() => setFirstButton(!firstButton)}
+              <Ionicons
+                name={
+                  firstButton
+                    ? "radio-button-on-outline"
+                    : "radio-button-off-outline"
+                }
+                color={firstButton ? "#FFDD5E" : "gray"}
+                size={20}
+                style={{ marginRight: 5 }}
               />
-              <Text style={styles.buttonText}>Share to</Text>
-              <Text style={styles.locationText}> The Spot</Text>
+              <Text style={styles.buttonText}>Share to </Text>
+              <Text style={styles.buttonText2}>The Spot</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() => setSecondButton(!secondButton)}
             >
-              <RadioButton
-                value="secondButton"
-                status={secondButton === true ? "checked" : "unchecked"}
-                onPress={() => setSecondButton(!secondButton)}
-                color="#FFDD5E"
+              <Ionicons
+                name={
+                  secondButton
+                    ? "radio-button-on-outline"
+                    : "radio-button-off-outline"
+                }
+                color={secondButton ? "#FFDD5E" : "gray"}
+                size={20}
+                style={{ marginRight: 5 }}
               />
-              <Text style={styles.buttonText}>Share to</Text>
-              <Text style={styles.locationText}> Spotlight</Text>
+              <Text style={styles.buttonText}>Share to </Text>
+              <Text style={styles.buttonText2}>Spotlight</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() => setThirdButton(!thirdButton)}
             >
-              <RadioButton
-                value="thirdButton"
-                status={thirdButton === true ? "checked" : "unchecked"}
-                onPress={() => setThirdButton(!thirdButton)}
-                color="#FFDD5E"
+              <Ionicons
+                name={
+                  thirdButton
+                    ? "radio-button-on-outline"
+                    : "radio-button-off-outline"
+                }
+                color={thirdButton ? "#FFDD5E" : "gray"}
+                size={20}
+                style={{ marginRight: 5 }}
               />
-              <Text style={styles.buttonText}>Share to</Text>
-              <Text style={styles.locationText}> My Story</Text>
+              <Text style={styles.buttonText}>Share to </Text>
+              <Text style={styles.buttonText2}>My Story</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() => setFourthButton(!fourthButton)}
             >
-              <RadioButton
-                value="fourthButton"
-                status={fourthButton === true ? "checked" : "unchecked"}
-                onPress={() => setFourthButton(!fourthButton)}
-                color="#FFDD5E"
+              <Ionicons
+                name={
+                  fourthButton
+                    ? "radio-button-on-outline"
+                    : "radio-button-off-outline"
+                }
+                color={fourthButton ? "#FFDD5E" : "gray"}
+                size={20}
+                style={{ marginRight: 5 }}
               />
-              <Text style={styles.buttonText}>Save to </Text>
-              <Text style={styles.locationText}>Gallery</Text>
+              <Text style={styles.buttonText}>Save Snap</Text>
             </TouchableOpacity>
           </View>
           {/*
@@ -199,7 +198,7 @@ export default function SavePostScreen({ route }) {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
+    flex: 1,
     flexGrow: 1,
     backgroundColor: "white",
     justifyContent: "center",
@@ -224,15 +223,15 @@ const styles = StyleSheet.create({
   //   margin: 20,
   //   flexDirection: 'row',
   // },
-  categoryHeader: {
-    fontSize: 16,
-    fontFamily: "Avenir Next",
-  },
   buttonContainer: {
     flexDirection: "row",
     alignItems: "center",
-    width: 210,
-    marginBottom: 2,
+    // width: 200,
+    paddingBottom: 8,
+    marginBottom: 8,
+    paddingLeft: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: "rgba(52, 52, 52, 0.2)",
   },
   postButton: {
     backgroundColor: "#5F86FF",
@@ -252,7 +251,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
   },
   categoryContainer: {
-    marginVertical: 15,
+    marginTop: 15,
     // backgroundColor: "#FBE869",
     borderRadius: 20,
     marginRight: 5,
@@ -269,7 +268,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: "Avenir Next",
   },
-  locationText: {
+  buttonText2: {
     fontSize: 18,
     fontWeight: "bold",
     fontFamily: "Avenir Next",
@@ -278,7 +277,8 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 0,
     right: 0,
-    height: 180,
-    width: 100,
+    height: 203,
+    width: 125,
+    zIndex: 10,
   },
 });

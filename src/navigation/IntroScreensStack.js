@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 
 //Screens
+import Welcome from "../screens/Welcome";
 import IntroFirst from "../screens/IntroFirst";
 import IntroSecond from "../screens/IntroSecond";
 import IntroThird from "../screens/IntroThird";
@@ -15,9 +16,13 @@ import UserStack from "./UserStack";
 const Stack = createStackNavigator();
 
 export default function IntroScreensStack({ navigation }) {
-  console.log("navigation second", navigation);
   return (
-    <Stack.Navigator initialRouteName="First">
+    <Stack.Navigator initialRouteName="Welcome">
+      <Stack.Screen
+        name="Welcome"
+        component={Welcome}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen
         name="First"
         component={IntroFirst}
@@ -34,45 +39,11 @@ export default function IntroScreensStack({ navigation }) {
         name="Second"
         component={IntroSecond}
         options={{ headerShown: false }}
-        // options={{
-        //   headerTitle: () => (
-        //     <Text style={{ fontSize: 20, fontWeight: "bold" }}>Second</Text>
-        //   ),
-        //   headerLeft: () => (
-        //     <Ionicons
-        //       name={"chevron-back-outline"}
-        //       size={25}
-        //       color={"black"}
-        //       onPress={() => {
-        //         navigation.navigate("First");
-        //       }}
-        //       style={{ paddingLeft: 10 }}
-        //     />
-        //   ),
-        //   headerShadowVisible: false,
-        // }}
       />
       <Stack.Screen
         name="Third"
         component={IntroThird}
         options={{ headerShown: false }}
-        // options={{
-        //   headerTitle: () => (
-        //     <Text style={{ fontSize: 20, fontWeight: "bold" }}>Third</Text>
-        //   ),
-        //   headerLeft: () => (
-        //     <Ionicons
-        //       name={"chevron-back-outline"}
-        //       size={25}
-        //       color={"black"}
-        //       onPress={() => {
-        //         navigation.navigate("Second");
-        //       }}
-        //       style={{ paddingLeft: 10 }}
-        //     />
-        //   ),
-        //   headerShadowVisible: false,
-        // }}
       />
       <Stack.Screen
         name="UserStack"
