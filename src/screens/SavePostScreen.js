@@ -95,7 +95,7 @@ export default function SavePostScreen({ route }) {
           <View style={styles.categoryContainer}>
             <Image
               source={{
-                uri: "https://sdk.bitmoji.com/render/panel/10212012-99006779034_18-s5-v1.png?transparent=1&palette=1&scale=2",
+                uri: "https://s3-alpha-sig.figma.com/img/7e84/644c/c7c94eecf41e1eceecbf42ece84f3490?Expires=1660521600&Signature=ePbnB665O1LRZ58hqcdnAQtuVVe3E3Qcul0MMNm83XvA8DRz0dz~P1YiFcOqTLjW454-hS5PmgdpM4-UGSkdPTONDPK7GJvO8G1~sxIKdjcxL-17U6G4Upu5zadzAy1wcwn8aM-IwwdC4roU17fA~1WTtJk-a6qQDIPYdz9ngvG6XirKoEekatQV4Qg6P84OWeYb18n~0mWxjNftGheD7PFxGfds3O1KMbnt7c7u4Q-NlkLJ9Z097x31GbXhakgRyBhkWTZW8yaopc3oHDMDdMI5IcnWK87YREoKmo~a0yF067g~7MGNscH7v6CiEUQ1E~dZonpNjZ9eRex89qX49Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
               }}
               style={styles.bitmoji}
             />
