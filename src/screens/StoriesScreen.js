@@ -145,7 +145,8 @@ const styles = StyleSheet.create({
   exitButton: {
     flex: 1,
     alignSelf: "left",
-    marginLeft: 3,
+    marginLeft: 10,
+    marginTop: 2.5
   },
   list: {
     flex: 1,
