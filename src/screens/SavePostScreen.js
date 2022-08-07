@@ -12,8 +12,6 @@ import {
   Pressable,
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { useIsFocused } from "@react-navigation/native";
-import { RadioButton } from "react-native-paper";
 import {
   getStorage,
   ref,
@@ -40,7 +38,6 @@ export default function SavePostScreen({ route }) {
   const { user } = useAuthentication();
   const media = route.params.source;
   const navigation = useNavigation();
-  const isFocused = useIsFocused();
 
   const saveMediaToStorage = async () => {
     const img = await fetch(media);
@@ -64,7 +61,7 @@ export default function SavePostScreen({ route }) {
 
   return (
     <View style={styles.container}>
-      {isFocused ? (
+
         <ScrollView style={styles.scrollView}>
           <Image style={styles.mediaPreview} source={{ uri: media }} />
           {/* <View style={styles.formContainer}>
@@ -171,13 +168,10 @@ export default function SavePostScreen({ route }) {
           </View>
   */}
         </ScrollView>
-      ) : (
-        <></>
-      )}
 
       <TouchableOpacity
         onPress={() => {
-          // saveMediaToStorage();
+          saveMediaToStorage();
           navigation.navigate("Camera");
           navigation.navigate("Stories");
         }}
