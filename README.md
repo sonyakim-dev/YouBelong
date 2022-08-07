@@ -5,9 +5,21 @@ Our team found that foster youth have incredible stories to share, but no platfo
 
 ## Run Project
 
-Step 1: `yarn install`
-
-Step 2: `expo start --tunnel`
+1. In terminal, run the following command:
+  ```
+  git clone https://github.com/rainawan/FosterYouth.git
+  ```
+  ```
+  cd FosterYouth
+  ```
+  ```
+  yarn install
+  ```
+  ```
+  expo start --tunnel
+  ```
+2. Download Expo Go on your mobile device (https://expo.dev/client)
+3. Scan the QR code in terminal, using your mobile device camera
 
 
 ## App Experience
