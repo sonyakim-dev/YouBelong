@@ -66,7 +66,8 @@ var resourceData = [
     name: "FosterClub",
     description:
       "FosterClub leads the efforts of young people in and from foster care to connect, educate, inspire, and feel represented. Peer support, locating resources, and learning their rights as youth in the foster system bring up their potential for success and contribute to a better life for their peers.",
-    image: "https://www.fosterclub.com/sites/default/files/fc-logo-print.png",
+    image:
+      "https://s3-alpha-sig.figma.com/img/b2b0/4aa9/6974511220dc9cb27cb513a60eaa5d52?Expires=1660521600&Signature=JN5Z5DZmSy4kieID3VCjK9xZ~QaQjWE9BvFviv6Lf3hgx2Lr2yHoQx2oxU9VoWhOTl8lbqYWxU14ak13GY9huZ6H~p1bvA3mT0zyzkFDJS0alruMd8qyYo1yQwEY2JK9oqXFouQOVcL643QCYScNpDGeZJD1rQbWKkVyki7OHUgKQJTAdnyGh-9qTxR4VpY4x4YRGQzMg6uinpabXbWFmjixE6ys0N~dloeItaQ0L4MNOqmHWIFKBsN14gRgBKjgkOCXoAJdoJAFuJaOQKwlQBJ8pnwG0D1-CoHv09jPsW6F~NhkWsAbhRgg8dTlrfVEE~nR8IYBL-qLXFTGSKh0pA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
     link: "https://www.fosterclub.com/",
     category1: "Access",
     category2: "Support",

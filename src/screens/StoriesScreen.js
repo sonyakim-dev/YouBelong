@@ -16,6 +16,8 @@ import { collection, getDocs, onSnapshot } from "firebase/firestore";
 import db from "../../firebase";
 import { StatusBar } from "expo-status-bar";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Video } from "expo-av";
 
 const wait = (timeout) => {
@@ -80,21 +82,13 @@ export default function StoriesScreen({ navigation, route }) {
       </Modal>
 
       <View style={styles.headerContainer}>
-        {/* <TouchableOpacity style={{ flex: 1 }}>
-          <Ionicons
-            name={"chevron-back-outline"}
-            color={"black"}
-            size={25}
-            style={styles.exitButton}
-          /> */}
         <Pressable
           style={[styles.button, styles.buttonOpen]}
           onPress={() => setModalVisible(true)}
         >
-          <Ionicons
-            name={"chevron-back-outline"}
-            color={"black"}
-            size={25}
+          <MaterialCommunityIcons
+            name="logout"
+            size={30}
             style={styles.exitButton}
           />
         </Pressable>

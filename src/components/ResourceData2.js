@@ -5,7 +5,7 @@ var resourceData = [
     description:
       "The “We Are One Project” mission is to provide the right tools for businesses to come together and employ foster youth who never had a chance at stable housing, a job, or a consistent person to care for them or show them life skills.",
     image:
-      "https://images.squarespace-cdn.com/content/v1/5a150f3abe42d6a9485fd2f6/1511641132817-MCULWHHNNMT6SZWHPF69/WAOwhite.png?format=1500w",
+      "https://s3-alpha-sig.figma.com/img/552e/859a/d94b65749c562ffe4597da84a0c69add?Expires=1660521600&Signature=JEHNdfHCoW2wwpzFXupIHRsBLghy9fEGQRSqIProL3jWJoweHgQQ0GLS~6pLVuaKw7PpE9b7Nc9oByLpiCqpNp9yzhgZU6Fh6lnsIRQCKJZGCbAdm5zu2McUvEZrNCqGvZi6XqlOeeZ7iiH1Xt44fxdRGEoDr6KG6AFe4RNsHTAYHmPfpKAY4bZgxjc5UoLI0L~5EP9ex9-Nx5-SR1mR9iTpDrkGiXGtJb7wT81d7uH70D9n6SyjhiaoSCD58-XNoqn22u6XB11bqUOnLbAfV-76g0aRlW02-AIswSCVGapu6ggU7VICZbU8l8LB5FSIxfm24GVv6hAQ1wA5dvF1Bw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
     link: "https://www.weareoneproject.org/our-vision",
     category1: "Employment",
     category2: "Volunteer",
