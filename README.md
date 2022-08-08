@@ -1,4 +1,4 @@
-# FosterYouth
+# YouBelong
 Final Project of Snap Academies 2022
 
 <img src="https://github.com/sonyakim-dev/git-practice/blob/main/youbelong-title-small.png?raw=true" width="500"/>
