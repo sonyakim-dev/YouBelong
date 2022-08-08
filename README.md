@@ -27,7 +27,7 @@ Our team found that foster youth have incredible stories to share, but no platfo
 
 ~ | The Spot | Camera | Resources
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-**Samples** | <img src="https://github.com/sonyakim-dev/git-practice/blob/main/foster-youth-thespot-small.gif?raw=true" width="180"/> | <img src="https://github.com/sonyakim-dev/git-practice/blob/main/sonya-small.gif?raw=true" width="180"/> | 
+**Samples** | <img src="https://github.com/sonyakim-dev/git-practice/blob/main/foster-youth-thespot-small.gif?raw=true" width="180"/> | <img src="https://github.com/sonyakim-dev/git-practice/blob/main/sonya-small.gif?raw=true" width="180"/> | <img src="https://github.com/rainawan/FosterYouth/blob/b4fcab4d7d6269f8e4ffd1d25abe34fea7a9218f/resources.gif?raw=true" width="180"/>
 
 ## Accessibility
 
