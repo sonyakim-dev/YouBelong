@@ -27,13 +27,13 @@ Our team found that foster youth have incredible stories to share, but no platfo
 
 ~ | The Spot | Camera | Resources
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-**Samples** | <img src="https://github.com/sonyakim-dev/git-practice/blob/main/foster-youth-thespot-small.gif?raw=true" width="180"/> | <img src="https://github.com/sonyakim-dev/git-practice/blob/main/sonya-small.gif?raw=true" width="180"/> | <img src="https://github.com/rainawan/FosterYouth/blob/b4fcab4d7d6269f8e4ffd1d25abe34fea7a9218f/resources.gif?raw=true" width="180"/>
+**Samples** | <img src="https://github.com/sonyakim-dev/git-practice/blob/main/foster-youth-thespot-small.gif?raw=true" width="180"/> | <img src="https://github.com/sonyakim-dev/git-practice/blob/main/sonya-small.gif?raw=true" width="180"/> | <img src="https://github.com/rainawan/FosterYouth/blob/a66864239ee392d944f243df31e0ce579b3506a6/assets/snapchat/resources.gif?raw=true" width="180"/>
 
 ## Accessibility
 
 ~ | Sign Up/Sign In | Intro | Facility Authentication
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-**Samples** | <img src="https://github.com/sonyakim-dev/git-practice/blob/main/foster-youth-login.gif?raw=true" width="180"/> | intro 3 pages | <img src="https://github.com/rainawan/FosterYouth/blob/9180e0bddc2d1ecf9d5cd018330064c55b7ad1ed/assets/snapchat/facility.gif?raw=true" width="180"/>
+**Samples** | <img src="https://github.com/sonyakim-dev/git-practice/blob/main/foster-youth-login.gif?raw=true" width="180"/> | <img src="https://github.com/rainawan/FosterYouth/blob/a66864239ee392d944f243df31e0ce579b3506a6/assets/snapchat/intro.gif?raw=true" width="180"/> | <img src="https://github.com/rainawan/FosterYouth/blob/9180e0bddc2d1ecf9d5cd018330064c55b7ad1ed/assets/snapchat/facility.gif?raw=true" width="180"/>
 
 ## Tools Used
 
