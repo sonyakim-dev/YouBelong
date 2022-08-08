@@ -1,6 +1,8 @@
 # FosterYouth
 Final Project of Snap Academies 2022
 
+<img src="https://github.com/sonyakim-dev/git-practice/blob/main/youbelong-title-small.png?raw=true" width="500"/>
+
 Our team found that foster youth have incredible stories to share, but no platform that nurtures a sense of community. YouBelong is a Snap Mini platform that fosters an environment of authenticity, self-expression, and happiness. We used React Native for the front end and Firebase to store images and videos for the backend.
 
 ## Run Project
