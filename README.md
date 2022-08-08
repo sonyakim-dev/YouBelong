@@ -18,8 +18,9 @@ Our team found that foster youth have incredible stories to share, but no platfo
   ```
   expo start --tunnel
   ```
-2. Download Expo Go on your mobile device (https://expo.dev/client)
-3. Scan the QR code in terminal, using your mobile device camera
+2. Add Firebase config file as `firebase.js`
+3. Download Expo Go on your mobile device (https://expo.dev/client)
+4. Scan the QR code in terminal, using your mobile device camera
 
 
 ## App Experience
