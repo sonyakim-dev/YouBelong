@@ -72,3 +72,6 @@ export default db;
 7. Google Firebase Firestore (https://firebase.google.com/docs/firestore)
 8. Google Firebase Storage (https://firebase.google.com/docs/storage)
 9. Google Firebase Authentication (https://firebase.google.com/docs/auth)
+
+## Case Study
+https://medium.com/@frcalam/b3e5d8747ce2
